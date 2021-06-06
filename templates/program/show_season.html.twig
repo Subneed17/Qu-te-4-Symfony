@@ -1,0 +1,29 @@
+{% include 'base.html.twig' %}
+
+{% block title %}
+	All programs
+{% endblock %}
+
+{% block body %}
+    
+ 
+	<h1>{{ program.title }}</h1>
+    <img src="{{ program.poster }}" width="30%">
+	<p>résumé:
+		<br>
+		{{ program.summary }}</p>
+    <div id="trait_dessus"></div>
+	<h2>Saison
+		{{season.number}} ({{ season.year }})</h2>
+	<p>liste des épisodes :</p>
+	{% for episode in season.episodes %}
+		<h2>Episode
+			{{ episode.number }}
+			:
+			" {{ episode.title}} " </h2><br>
+		<p>{{ episode.synopsis }}</p>
+	{% endfor %}
+	<a href="{{ path('program_show', { id: program.id }) }}">
+		Retour à la fiche détaillée
+	</a>
+{% endblock %}

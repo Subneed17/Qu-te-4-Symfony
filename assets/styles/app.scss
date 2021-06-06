@@ -3,4 +3,35 @@ body {
     background-color: lightgray;
     color: rgb(52, 54, 52);
     font-size: 1.2rem;
+    text-align: center;
 }
+button.favorite.styled {
+    width: 150px;
+    margin: 0.5rem;
+}
+a {
+    text-decoration: none;
+    // font-size: 1.6rem;
+}
+.type-categorie {
+    margin: 0.5rem;
+}
+img {
+	width: 700px;
+	height: 500px;
+}
+
+#trait_dessus
+{
+border-top: 1px solid #000;
+width : 60%;
+margin-left: auto;
+margin-right: auto;
+}
+
+p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
