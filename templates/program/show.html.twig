@@ -1,8 +1,8 @@
-{% include 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 {% block title %}Série {{ program.id }}
 {% endblock %}
 
-{% block body %}
+{% block content %}
  {# {{ dump() }} #}
 
 	<div class="media">
@@ -20,7 +20,7 @@
 			{% for season in program.seasons %}
       <div class="col">
 				<button class="favorite styled">
-					<a href="{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}" type="button">
+					<a href="{{ path("program_season_show", { 'program': program.id, 'season': season.id }) }}" type="button">
 						season
 						{{ season.number }}</a>
 				</button>

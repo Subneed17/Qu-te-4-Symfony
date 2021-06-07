@@ -1,4 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
+
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: lightgray;
     color: rgb(52, 54, 52);
@@ -16,10 +20,7 @@ a {
 .type-categorie {
     margin: 0.5rem;
 }
-img {
-	width: 700px;
-	height: 500px;
-}
+
 
 #trait_dessus
 {
@@ -35,3 +36,19 @@ p {
     margin-right: auto;
 }
 
+.poster-mini {
+    width: 30%;
+}
+img.miniature {
+    width: 50%;
+}
+// .img {
+//     max-width: 100%;
+// }
+
+.resume {
+    width: 65%;
+}
+.chaques-episodes-une-photo {
+    display: flex;
+}

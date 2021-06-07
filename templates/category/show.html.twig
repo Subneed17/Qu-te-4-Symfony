@@ -1,13 +1,13 @@
 
-{% include 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 {% block title %}Catégorie ' {{ category.name }} '{% endblock %}
 
-{% block body %}
+{% block content %}
     {% for program in programs %}
         <div>
         {# {{ loop.index }} / {{ program.id }} #}
             <h2> {{ program.title }} - Catégorie : {{ program.category.name }}</h2>
-            <img src="{{ program.poster }}" width="">
+            <img class="align-self-start mr-3" src="{{ program.poster }}" width="">
             <p>{{ program.summary }}</p>
             {# Lien vers la fiche de la série : #}
             <a href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>

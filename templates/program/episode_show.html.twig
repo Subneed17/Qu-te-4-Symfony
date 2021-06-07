@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	{{ program.title }}
+{% endblock %}
+
+{% block content %}
+	<h2>Episode {{ episode.number }} | {{ episode.title }}</h2>
+	
+<div class="chaques-episodes-une-photo">
+	<div class="poster-mini" >
+		<img class="miniature" src="{{ program.poster }}" alt="{{ program.title }} poster">
+	</div>
+
+	<div class="resume">
+		Synopsis: {{ episode.synopsis }}
+    </div>
+</div>
+
+<a href="{{ path('program_show', { id: program.id }) }}">
+	Retour à la fiche détaillée
+</a>
+
+{% endblock %}
