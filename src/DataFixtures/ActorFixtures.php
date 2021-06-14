@@ -12,7 +12,12 @@ class ActorFixtures extends Fixture
         'Andrew Lincoln',
         'Norman Reedus',
         'Lauren Cohan',
-        'Danai Gurira'
+        'Danai Gurira',
+        'Jeffrey Dean Morgan',
+        'Chandler Riggs',
+        'emilia clark',
+        'kit harington',
+        'sophie turner',
     ];
     public function load(ObjectManager $manager)
     {
@@ -20,6 +25,7 @@ class ActorFixtures extends Fixture
             $actor = new Actor();
             $actor->setName($ActorName);
             $manager->persist($actor);
+            $this->addReference('actor_' . $key, $actor);
         }
         $manager->flush();
     }
