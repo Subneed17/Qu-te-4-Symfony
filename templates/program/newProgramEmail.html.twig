@@ -1,0 +1,11 @@
+{% extends 'layoutEmail.html.twig' %}
+	{% block body %}
+	<body>
+		<h1>New program
+			{{ program.title }}
+			created</h1>
+		<p>Summary :{{program.summary }}
+		</p>
+	</body>
+	{% endblock %}
+
