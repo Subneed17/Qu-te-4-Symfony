@@ -20,13 +20,13 @@
 
 		<div class="col">
 				<button class="favorite styled">
-					<a href="{{ path("program_episode_show", { 'program': program.id, 'season': season.id, 'episode': episode.id }) }}" type="button">
+					<a href="{{ path("program_episode_show", { slug : program.slug , season_id: season.id, slug_episode: episode.slug }) }}" type="button">
 						épisode 
 						{{ episode.number }} </a>
 				</button>
         </div>
 	{% endfor %}
-	<a href="{{ path('program_show', { id: program.id }) }}">
+	<a href="{{ path('program_show', { slug: program.slug }) }}">
 		Retour à la fiche détaillée
 	</a>
 {% endblock %}

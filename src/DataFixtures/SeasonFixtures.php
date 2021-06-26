@@ -36,11 +36,11 @@ class SeasonFixtures extends Fixture implements DependentFixtureInterface
     {
         for ($i = 0; $i < count(ProgramFixtures::PROGRAMS); $i++) {
 
-            foreach (self:: SEASONS as $key => $seasonTous) {
+            foreach (self:: SEASONS as $key => $val) {
                 $season = new Season();
-                $season->setnumber($seasonTous['number']);
-                $season->setyear($seasonTous['year']);
-                $season->setdescription($seasonTous['description']);
+                $season->setnumber($val['number']);
+                $season->setyear($val['year']);
+                $season->setdescription($val['description']);
                 $season->setProgram($this->getReference('program_' . $i));
                 $manager->persist($season);
                 $this->addReference('season_' . $key. $i, $season);

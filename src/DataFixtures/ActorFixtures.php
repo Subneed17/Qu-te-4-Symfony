@@ -18,12 +18,13 @@ class ActorFixtures extends Fixture
         'emilia clark',
         'kit harington',
         'sophie turner',
+        'Travis Fimmel',
     ];
     public function load(ObjectManager $manager)
     {
-        foreach (self::Actor as $key => $ActorName) {
+        foreach (self::Actor as $key => $val) {
             $actor = new Actor();
-            $actor->setName($ActorName);
+            $actor->setName($val);
             $manager->persist($actor);
             $this->addReference('actor_' . $key, $actor);
         }

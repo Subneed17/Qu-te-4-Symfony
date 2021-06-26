@@ -28,7 +28,7 @@
 			{% for season in program.seasons %}
       <div class="col">
 				<button class="favorite styled">
-					<a href="{{ path("program_season_show", { 'program': program.id, 'season': season.id }) }}" type="button">
+					<a href="{{ path("program_season_show", { 'slug':program.slug , season_id: season.id }) }}" type="button">
 						season
 						{{ season.number }}</a>
 				</button>
